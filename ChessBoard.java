@@ -1,19 +1,16 @@
+import GamePieces.Piece;
+
 public class ChessBoard {
-    char[][] board;
+    Piece[][] board;
     boolean checkMate = false;
     boolean check = false;
     boolean nothing =true;
     public ChessBoard(){
-        board = new char[8][8];
+        board = new Piece[8][8];
     }
 
-    public void AddPiece(int row, int column, char c){
-        this.board[row][column] = c;
+    public void AddPiece(Piece p){
+        this.board[p.getPos()[0]][p.getPos()[1]] = p;
     }
 
-    public void AddPawn(int row){
-        for (int i=0; i<8; i++) {
-            board[row][i] = 'p';
-        }
-    }
 }

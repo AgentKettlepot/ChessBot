@@ -4,8 +4,8 @@ public class Bishop extends Piece{
     static int[] pos;
     static int[] isAlive;
     static int[] Color;
-    public Bishop (int[] pos, boolean isAlive, boolean Color){
-            super(pos, isAlive, Color);
+    public Bishop (int x, int y, boolean isAlive, boolean Color){
+            super(x, y, isAlive, Color);
         }
         
     public int[] Move(int[][] board, int[] curr_pos, boolean color, int[] new_pos){

@@ -9,8 +9,9 @@ public class Piece {
         IsAlive = false;
         Color = false;
     }
-    public Piece(int[] curr_pos, boolean status, boolean color){
-        pos = curr_pos;
+    public Piece(int curr_pos_x, int curr_pos_y, boolean status, boolean color){
+        pos[0] = curr_pos_x;
+        pos[1] = curr_pos_y;
         IsAlive = status;
         Color = color;
     }
