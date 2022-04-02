@@ -1,10 +1,15 @@
 package GamePieces;
 public class Pawn extends Piece{
-    static int[] pos;
-    static int[] isAlive;
-    static int[] Color;
-    public Pawn(int x, int y, boolean isAlive, boolean Color){
-        super(x, y, isAlive, Color);
+    static int[] pos = new int[2];
+    boolean isAlive;
+    boolean Color;
+    public Pawn(int x, int y, boolean isalive, boolean color){
+        //super(x, y, isAlive, Color);
+        pos[0] = x;
+        pos[1] = y;
+        isAlive = isalive;
+        Color = color;
+
     }
 
     public int[] Move(int[][] board, int[] curr_pos, boolean color, int[] new_pos){
@@ -54,5 +59,14 @@ public class Pawn extends Piece{
             }
         }
         return false;
+    }
+
+    public String toString(){
+        if (Color){
+            return "Black Pawn";
+        }
+        else{
+            return "White Pawn";
+        }
     }
 }

@@ -16,13 +16,15 @@ public class Piece {
         Color = color;
     }
 
-    public static int[] getPos(){
+    public int[] getPos(){
         return pos;
     }
-    public static boolean getAlive(){
+    public boolean getAlive(){
         return IsAlive;
     }
-    public static boolean getColor(){
+    public boolean getColor(){
         return Color;
     }
+
+
 }

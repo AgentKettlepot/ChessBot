@@ -2,7 +2,7 @@ package GamePieces;
 public class Rook extends Piece{
     static int[] pos;
     static int[] isAlive;
-    static int[] Color;
+    boolean Color;
     public Rook(int x, int y, boolean isAlive, boolean Color){
         super(x, y, isAlive, Color);
     }
@@ -24,5 +24,14 @@ public class Rook extends Piece{
         if (new_pos[0]==curr_pos[0]) return true;
         if (new_pos[1]==curr_pos[1]) return true;
         return false;
+    }
+
+    public String toString(){
+        if (Color){
+            return "Black Rook";
+        }
+        else{
+            return "White Rook";
+        }
     }
 }

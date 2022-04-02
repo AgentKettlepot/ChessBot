@@ -74,6 +74,7 @@ public class Tester{
         Piece WhiteBishop2 = new Rook(5, 7, false, false);
         Testboard.AddPiece(WhiteBishop2);
 
+        System.out.println(Testboard.printBoard());
         //Get User to input every piece
     }
 }

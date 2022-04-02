@@ -2,7 +2,7 @@ package GamePieces;
 public class Queen extends Piece{
     static int[] pos;
     static int[] isAlive;
-    static int[] Color;
+    boolean Color;
     public Queen(int x, int y, boolean isAlive, boolean Color){
         super(x, y, isAlive, Color);
     }
@@ -25,5 +25,14 @@ public class Queen extends Piece{
         if (new_pos[1]==curr_pos[1]) return true;
         if (Math.abs(new_pos[0] - curr_pos[0]) == Math.abs(new_pos[1] - curr_pos[1])) return true; //diagonals
         return false;
+    }
+
+    public String toString(){
+        if (Color){
+            return "Black Queen";
+        }
+        else{
+            return "White Queen";
+        }
     }
 }

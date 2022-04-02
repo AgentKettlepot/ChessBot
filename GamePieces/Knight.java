@@ -2,7 +2,7 @@ package GamePieces;
 public class Knight extends Piece{
     static int[] pos;
     static int[] isAlive;
-    static int[] Color;
+    boolean Color;
     public Knight(int x, int y, boolean isAlive, boolean Color){
         super(x, y, isAlive, Color);
     }
@@ -39,5 +39,14 @@ public class Knight extends Piece{
         else if (new_pos[0]-1 == curr_pos[0] && new_pos[1]-2 == curr_pos[0]) return true;
         
         return false;
+    }
+
+    public String toString(){
+        if (Color){
+            return "Black Knight";
+        }
+        else{
+            return "White Knight";
+        }
     }
 }

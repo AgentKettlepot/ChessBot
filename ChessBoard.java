@@ -13,4 +13,21 @@ public class ChessBoard {
         this.board[p.getPos()[0]][p.getPos()[1]] = p;
     }
 
+    public String printBoard(){
+        String res = "";
+        for (int r=0; r<board.length; r++){
+            for (int c=0; c<board[0].length; c++){
+                if (board[r][c]==null){
+                    res += " ";
+                }
+                else{
+                    res +=board[r][c].toString();
+                }
+         
+            }
+            res +="\n";
+        }
+        return res;
+    }
+
 }
